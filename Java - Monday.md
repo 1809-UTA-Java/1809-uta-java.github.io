@@ -21,3 +21,44 @@ Java is an object-oriented programming language and a platform developed by Sun 
 *Inheritence* - COde reuse is an important principle of programming (DRY - Don't Repeat Yourself), and new classes can reuse code from existing ones. This establishes a superclass-subclass (or parent-child) relationship where the derived classes inherit (and sometimes change) fields and methods from its parent.
 
 *Polymorphism* - With inheritance, an object of a derived class can be referenced as instances of its parent class. This provides flexibility when invoking inherited methods with varying implementations in derived classes.
+
+## Programming and Compiling
+Most Java applications only require the **JRE** (Java Runtime Environment). But to write and compile you need the **JDK** (Java Development Kit). While the JRE provides Java's standard libraries and exceptions as well as a JVM, the JDK provaides all the above as well as *javac*, the compiler. Java source code is written in text files labeled with *.java* extension. It is then compiled into bytecode in *.class* files by *javac*. Then the bytecode is executed by the JVM, which translates the Java commands into low-level instructions to the operating system.
+
+Since Java 6, all Java programs not run inside a container (such as a Servlet Web Container) start and end with the main method. The class containing the main method can have any name, but the method itself should always be named *main*
+
+```java
+class Example {
+    public static void main(String[] args) {
+        System.out.println("Num args:" + args.length);
+    }
+}
+```
+
+*public* means the method can be invoked from anywhere.
+*static* means the method can be invoked without creating an instance of the class
+*void* means the method doesn't return any value
+*args* means the method can take command line arguments as an array of Strings
+
+We can compile this code into a *.class* file of the same name:
+>javac Example.java
+
+If the class has a package com.demo; then javac code will result in a folder structure that mimics the package structure.
+
+To run the above basic example:
+>java Example
+
+If you have a package com.demo, then you run
+>java com.demo.Example
+
+From here we can add packages and imports, expanding the application into a set of interacting objects. By default, the *javac* compiler implicity imports several base packages from the standard library.
+
+##Classpath
+Javac will respond to a classpath variable. You can set the classpath, or the base location from which to start looking for a class, using:
+>javac -classpath /home/developers/Workspace/Example/bin com/demo/Example.java
+
+If you wanted to add junit.jar
+>javac -cp .:bin:lib/junit.jar com/demo/Example.java
+
+The *javac* compiler also looks for CLASSPATH environment variables. In your terminal, you can export CLASSPATH=.:bin:lib/junit.jar, so that after you can:
+javac com/demo/Exampl.java
