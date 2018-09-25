@@ -53,7 +53,7 @@ If you have a package com.demo, then you run
 
 From here we can add packages and imports, expanding the application into a set of interacting objects. By default, the *javac* compiler implicity imports several base packages from the standard library.
 
-##Classpath
+## Classpath
 Javac will respond to a classpath variable. You can set the classpath, or the base location from which to start looking for a class, using:
 >javac -classpath /home/developers/Workspace/Example/bin com/demo/Example.java
 
@@ -61,4 +61,4 @@ If you wanted to add junit.jar
 >javac -cp .:bin:lib/junit.jar com/demo/Example.java
 
 The *javac* compiler also looks for CLASSPATH environment variables. In your terminal, you can export CLASSPATH=.:bin:lib/junit.jar, so that after you can:
-javac com/demo/Exampl.java
+>javac com/demo/Exampl.java
