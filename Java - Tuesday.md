@@ -20,3 +20,32 @@ Reference types store the memory address location of more complex data types. Th
 - Can only use letters, numbers, and *$* or *_* characters
 - Cannot begin with a number
 - Cannot be a reserved Java keyword
+
+## Scopes of a variable
+A variable's reference will only exist within the context of its declared scope, which is based on the location of its declaration.
+
+**Static** or class scoped variables are visible to all instances of a related class.
+**Instance** or object scoped variables are visible to only that object instance.
+**Local** or method scoped variables are visible only within a method.
+**Block** or loop coped variables are visible only within a block statement.
+
+Be aware of shadowing, when two variables in different scopes share names.
+
+## Methods
+Methods accept a list of arguments known as *parameters* and return some value. They are used to implement repeatable, consistent actions on variable input, much like math functions.
+>public int myMethod(int a, int b);
+
+>public int myMethod(int a);
+
+## Constructors
+Classes not only define object fields and methods, but how it should be instantiated through special methods called constructors. Contructors must have no return type and share the same name as its class. Java will automatically give you a *noargs* contructor. However, if you define any constructor, you will lose the automatically given constructor.
+
+While a constructor may be *private*, used for singletons, it may not be *final*, *static*, or *abstract*.
+
+## Access modifiers
+**private** - accessible only within the context of that class
+**default** - accessible within the context of a package, has no associated keyword so is set when no modifier is used
+**protected** - accessible to the package, but also to derived child classes outside of the package
+**public** - accessible anywhere
+
+Classes should only be public or default. There are no cascading access levels, and unspecified fields will be default. Subclasses can only change inherited fields to be less restrictive.
