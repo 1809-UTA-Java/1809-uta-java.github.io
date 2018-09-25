@@ -27,7 +27,7 @@ A variable's reference will only exist within the context of its declared scope,
 **Static** or class scoped variables are visible to all instances of a related class.
 **Instance** or object scoped variables are visible to only that object instance.
 **Local** or method scoped variables are visible only within a method.
-**Block** or loop coped variables are visible only within a block statement.
+**Block** or loop scoped variables are visible only within a block statement.
 
 Be aware of shadowing, when two variables in different scopes share names.
 
