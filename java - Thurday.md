@@ -26,7 +26,7 @@ An **ArrayList** extends **AbstractList** and implements **List** (among others)
 **LinkedList** extends AbstractSequentialList** and implements **List** and **Deque** (among others). **LinkedList** is implemented using a doubly-linked list (meaning it is iterable both forward and backwards).  
   
    
-##Map
+##Map##
 **Map** is an interface which stores data with a key. A map cannot contain duplicate keys; each key can map to at most one value. **Map** can be visualized like a dictionary where only one word is paired with one definition.  
   
 ###HashMap###  
