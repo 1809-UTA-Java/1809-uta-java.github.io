@@ -7,9 +7,9 @@ A value is stored and identified in memory by a variable. Variables have a name 
 
 ## Primitive data types
 Java handles two kinds of datatypes: primitives and references. Primitives are variables that store simple values. There are eight in Java.
--Integer types: **byte**, **short**, **int**, and **long** (42)
--Floating-point types: **float**, and **double** (3.1415)
--Logical types: **boolean** (true)
+-Integer types: **byte**, **short**, **int**, and **long** (42)  
+-Floating-point types: **float**, and **double** (3.1415)  
+-Logical types: **boolean** (true)  
 -Character type: **char** ('x')
 
 ## Reference types
