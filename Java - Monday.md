@@ -62,3 +62,21 @@ If you wanted to add junit.jar
 
 The *javac* compiler also looks for CLASSPATH environment variables. In your terminal, you can export CLASSPATH=.:bin:lib/junit.jar, so that after you can:
 >javac com/demo/Exampl.java
+
+## Shell Scripts
+In Linux, shell scripts can be used to automate the entry of commands into terminal. Essentially, a shell script is a text file where each line is a separate command that you would otherwise type into the terminal command line.  An example script will be included in the notes.
+
+**Granting Execution Permission** 
+As discussed prior, a shell script is only a text file. In order to be able to run the script we must tell the operating system that the file has executable permissions.
+>chmod +x scriptFileName
+
+Running this command with give the file only execution permissions. chmod has several other permissions that can be granted to a file but this is the only permission that we will need. To view a more complete description of chmod run:
+>man chmod
+
+**Running Shell Scripts** 
+Once you have granted the necessary permissions to your script, all that is left is to run it. 
+>./scriptFileName
+
+
+
+

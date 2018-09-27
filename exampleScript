@@ -1,0 +1,5 @@
+#This is a comment!
+#javac -d bin src/com/revature/YOURPROJECT.java
+#java -cp bin com.revature.YOURPROJECT
+#This is an easteregg!
+apt-get moo
