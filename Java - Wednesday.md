@@ -5,7 +5,7 @@
 
 **FileInputStream** Reads bytes sequentially from a file.
 
-**ObjectInputStream** Reads binary repr esentations of Java objects and primitive values from a byte stream. This class is used for the deserialization of objects.
+**ObjectInputStream** Reads binary representations of Java objects and primitive values from a byte stream. This class is used for the decentralization of objects.
 
 ## Character Input Streams
 **BufferedReader** Reads a buffer of characters from a Reader, and then returns characters from the buffer, making small reads more efficient.
@@ -19,7 +19,7 @@
 
 **FileOutputStream** Writes bytes sequentially to a file.
 
-**ObjectOutputStream** Writes binary repr esentations of Java objects and primitive values to an OutputStream. Used for the serialization of objects.
+**ObjectOutputStream** Writes binary representations of Java objects and primitive values to an OutputStream. Used for the serialization of objects.
 
 ## Character Output Streams
 **BufferedWriter** Buffers output for efficiency; writes characters to a Writer only when the buffer fills up.

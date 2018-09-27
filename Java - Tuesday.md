@@ -38,7 +38,7 @@ Methods accept a list of arguments known as *parameters* and return some value. 
 >public int myMethod(int a);
 
 ## Constructors
-Classes not only define object fields and methods, but how it should be instantiated through special methods called constructors. Contructors must have no return type and share the same name as its class. Java will automatically give you a *noargs* contructor. However, if you define any constructor, you will lose the automatically given constructor.
+Classes not only define object fields and methods, but how it should be instantiated through special methods called constructors. Constructors must have no return type and share the same name as its class. Java will automatically give you a *noargs* constructor. However, if you define any constructor, you will lose the automatically given constructor.
 
 While a constructor may be *private*, used for singletons, it may not be *final*, *static*, or *abstract*.
 
