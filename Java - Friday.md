@@ -32,5 +32,11 @@ design patterns
 singleton - only one instance can be made and used
 factory - give it a small amount of info and it does all the work for you. factory is good because if you were to modify an objects constructor, suddenly everywhere you instanciate an object there would be an error now. instead we can just change the factory and how it creates things without ruining any constructors
 
+threading
 
-producer consumer problem. threading pet problem
+producer consumer problem. threading pet problem will need to know for monday
+
+syncronization and deadlocks
+
+
+generics
