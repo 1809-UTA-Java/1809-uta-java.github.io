@@ -1,15 +1,18 @@
 # Topics covered
 
 1. Introduction to Java: Features
-1. OOP: Polymorphism, Encapsulation, Inheritance, Abstraction
+1. "Pillars of OOP" - Polymorphism, Encapsulation, Inheritance, and Abstraction.
 1. Keywords (new, static, final, etc), naming conventions
 1. Constructors (noargs)
 1. Methods (signature, return type, parameters)
 1. Scopes of a variable (class, object, method, loop)
 1. Control Statements (for, foreach, if, while, do while, switch)
 1. Arrays, varargs
-1. Access modifiers (private, default, protected, public)
-1. String API
+1. Access modifiers (private, default, protected, public) - **Access Modifers** resrtict the use of their methods to 
+other objects. 
+
+1. String API - Provides functionality for dealing with **Strings** in Java. It provides methods for creation, 
+manipulation, and abstraction to the **String Pool** and associated garbage collection.
 1. String Pool - String Pool is possible only because String is immutable in Java. Strings are instead stored in heap 
 in the **String pool** and are constantly being reused in order to save space. In the instance where two String objects 
 contain the same strinng, both of the objects should point to the same string in the string pool. String pool helps
@@ -27,13 +30,19 @@ things could likley create exceptions thus it requires you to catch these possib
 1. Unchecked Exceptions - These are a type of exception that the compiler cannot predit. This type of exception would 
 only be known at runtime. 
 1. errors
-1. Garbage Collection, finalize()
+1. Garbage Collection - Automatic memory management. The Garbage collection is implemented by the **JVM** and runs 
+without interuption or direction by the user.,
+1. finalize() - called by the garbage collector on an object when garbage collection determines that there are no 
+more references to the object. A user may call this method to suggest to the garbage collector to colelct garbage 
+for an object.
 
 1. Wrapper Classes - A Wrapper class is a class whose object wraps or contains a primitive data type. ex. Integer
 1. Autoboxing -  automatic conversion that the Java compiler makes between the primitive types and their corresponding
 object wrapper classes. For example, converting an int to an Integer.
 
 1. Reflection API
+1. Abstraction - Where a programmer attempts to remove complexity from code implementation by using encapsulation, 
+**Inheritence**, and **Polymorphism**.
 1. Inheritance - The ability for children to **Inherit** the preexisting fields and methods of the parent class.
 1. Polymorphism - The ability for children to change the functionality of inherited methods.
 1. Method overloading - This can be done either to a method within the child or to an inherited method. Overloading is 
@@ -62,8 +71,13 @@ By defining a Run method, you tell **Thread** where the entry point for this thr
 1. Synchronization -  is the capability to control the access of multiple threads to any shared resource. This is important
  because without **syncronization** you could create a deadlock if two threads try to access the same resource ast the same time.
 
-1. Singleton Design pattern
-1. Factory Design pattern
+1. Singleton Design pattern - A design pattern where only one instance of the **Singleton** can be instanciated in the program. 
+The refrence to the singeton is passed arouns and is used collectivly by the program to provide some sort of functionality.
+1. Factory Design pattern - Used when we have a super class with multiple sub-classes and based on input, we need to return 
+one of the sub-class. This pattern take out the responsibility of instantiation of a class from client program to the factory
+ class. This is important where the contructor to an object is changed. If we were calling these contructors without using the 
+factory design pattern we would have to go modify everywhere in our code where we were calling said constructor, instead we can 
+simply modify the implementation of the factory thus preventing additional work or room for errors elesewhere.
 
 1. Unit Testing/JUnit
 1. Assert methods, annotations
