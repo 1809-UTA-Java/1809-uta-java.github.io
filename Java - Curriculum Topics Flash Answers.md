@@ -17,10 +17,10 @@ contain the same strinng, both of the objects should point to the same string in
 
 1. StringBuilder vs StringBuffer
 1. Exception handling (try, try with resources, catch, finally)
-ii. Finally - an optional portion of a try/catch block that executes regardless.
-ii. Try - Attempts to run a snippet of code that may result in an exception. If an exception does occour then it is 
+    2. Finally - an optional portion of a try/catch block that executes regardless.
+    2. Try - Attempts to run a snippet of code that may result in an exception. If an exception does occour then it is 
 handled by the catch block.
-ii. Catch - The **Catch** block runs if an exception is thrown by the try block. you can have multiple catch blocks 
+    2. Catch - The **Catch** block runs if an exception is thrown by the try block. you can have multiple catch blocks 
 which will activate based on the type of exception thrown.
 1. Checked Exceptions - These exceptions are checked by the compiler at run time. The sompiler knows that particular 
 things could likley create exceptions thus it requires you to catch these possible execptions.
