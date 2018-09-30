@@ -10,10 +10,16 @@
 1. Arrays, varargs
 1. Access modifiers (private, default, protected, public)
 1. String API
-1. String Pool
+1. String Pool - String Pool is possible only because String is immutable in Java. Strings are instead stored in heap 
+in the **String pool** and are constantly being reused in order to save space. In the instance where two String objects 
+contain the same strinng, both of the objects should point to the same string in the string pool. String pool helps
+ in saving a lot of space for Java Runtime although it takes more time to create the String.
+
 1. StringBuilder vs StringBuffer
 1. Exception handling (try, try with resources, catch, finally)
-1. Checked vs Unchecked Exceptions, errors
+1. Checked Exceptions - These exceptions are checked by the compiler at run time. The sompiler knows that particular 
+things could likley create exceptions thus it requires you to catch these possible execptions.
+1. Unchecked Exceptions, errors
 1. Garbage Collection, finalize()
 
 1. Wrapper Classes - A Wrapper class is a class whose object wraps or contains a primitive data type. ex. Integer
