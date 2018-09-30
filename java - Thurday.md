@@ -12,9 +12,9 @@ Java provides the **Collection** interface which provides a framework for severa
   
 **ArrayList** extends **AbstractList** and implements **List** (among others). **ArrayList** provides a dynamic array implementation. **ArrayList** has a dynimic capacity which is resized when the user fills the container. At all times the **ArrayList** capacity will be either larger or the same size as the number of elements it contians.  
   
-**HashSet** extends **AbstractSet** and implements **Set** (among others). **HashSet** implements the **Set** interface which organizes elemts based on a hash table. Due to the hash table, there is no guananteed order of iteration.  
+**HashSet** extends **AbstractSet** and implements **Set** (among others). **HashSet** implements the **Set** interface which organizes elemts based on a hash map. Due to the hash map, there is no guananteed order of iteration.  
   
-**TreeSet** extends **AbstractSet** and implements **NavigableSet** (Not **Queue** despite the diagram in class?). Elements in the set are ordered using natural ordering (sorted and ascending order). **TreeSet** does not preserve the insertion order of elements but elements are sorted by keys. **TreeSet** is essentially an implementation of a self-balancing binary search tree.  
+**TreeSet** extends **AbstractSet** and implements **NavigableSet**. Elements in the set are ordered using natural ordering (sorted and ascending order). **TreeSet** does not preserve the insertion order of elements but elements are sorted by keys. Alternatively, a Comparator can be passed in the constructor to achieve other orderings. Elements in a **TreeSet** must be homogenous and comparable with the default sorting or else a runtime *ClassCastException* will occur. **TreeSet** is essentially an implementation of a self-balancing binary search tree.  
   
 **LinkedList** extends AbstractSequentialList** and implements **List** and **Deque** (among others). **LinkedList** is implemented using a doubly-linked list (meaning it is iterable both forward and backwards).  
   
