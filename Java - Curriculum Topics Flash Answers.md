@@ -3,10 +3,12 @@
 1. Introduction to Java: Features
 1. "Pillars of OOP" - Polymorphism, Encapsulation, Inheritance, and Abstraction.
 1. Keywords (new, static, final, etc), naming conventions
-1. Constructors (noargs)
+1. Constructors (noargs) - **Constructors** are called in order to instansiate an object. **Constructors** also are 
+also used to instansiate fields within the object created.
 1. Methods (signature, return type, parameters)
-1. Scopes of a variable (class, object, method, loop)
-1. Control Statements (for, foreach, if, while, do while, switch)
+1. Scopes of a variable (class, object, method, loop) - Describing the regions in code where a varible is accessable.
+1. Control Statements (for, foreach, if, while, do while, switch) - As the name suggests, Control statements manipulate
+ the flow of a programs execution.
 1. Arrays, varargs
 1. Access modifiers (private, default, protected, public) - **Access Modifers** resrtict the use of their methods to 
 other objects. 
@@ -18,7 +20,9 @@ in the **String pool** and are constantly being reused in order to save space. I
 contain the same strinng, both of the objects should point to the same string in the string pool. String pool helps
  in saving a lot of space for Java Runtime although it takes more time to create the String.
 
-1. StringBuilder vs StringBuffer
+1. StringBuilder vs StringBuffer - Both are libraries for manipulating **Strings** however the diffrence between the 
+two is that StringBuilder provides no syncronization but StringBuffer does.
+
 1. Exception handling (try, try with resources, catch, finally)
 1. Finally - an optional portion of a try/catch block that executes regardless.
 1. Try - Attempts to run a snippet of code that may result in an exception. If an exception does occour then it is 
@@ -29,7 +33,9 @@ which will activate based on the type of exception thrown.
 things could likley create exceptions thus it requires you to catch these possible execptions.
 1. Unchecked Exceptions - These are a type of exception that the compiler cannot predit. This type of exception would 
 only be known at runtime. 
-1. errors
+1. Errors - **Error** are what exception handling aims to mitigate. Errors if caught will not stop a program from 
+executing but if not caught will stop the program at runtime. 
+
 1. Garbage Collection - Automatic memory management. The Garbage collection is implemented by the **JVM** and runs 
 without interuption or direction by the user.,
 1. finalize() - called by the garbage collector on an object when garbage collection determines that there are no 
@@ -40,7 +46,9 @@ for an object.
 1. Autoboxing -  automatic conversion that the Java compiler makes between the primitive types and their corresponding
 object wrapper classes. For example, converting an int to an Integer.
 
-1. Reflection API
+1. Reflection API - Reflection is an API which is used to examine or modify the behavior of methods, classes, 
+interfaces at runtime thus ignoring access modifiers.
+
 1. Abstraction - Where a programmer attempts to remove complexity from code implementation by using encapsulation, 
 **Inheritence**, and **Polymorphism**.
 1. Inheritance - The ability for children to **Inherit** the preexisting fields and methods of the parent class.
