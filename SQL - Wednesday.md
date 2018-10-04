@@ -96,8 +96,10 @@
 **DCL** Data Control Language, setting user permissions (GRANT, REVOKE)
 
 **DDL** Data Definition Language, working with database structure (CREATE, ALTER, TRUNCATE, DROP) EX:
+```sql
 CREATE TABLE (Schema)[TableName]
 (Column definitions (Constraints))
+
 
 ALTER TABLE [TableName]
 ADD (Column) [Column definition]
@@ -105,35 +107,51 @@ ADD (Constraint clause)
 DROP [column] [cascade]
 DROP Constraint
 ALTER COLUMN [definition]
+```
 
 **DML** Data Manipulation Language, working with the rows of data itself (INSERT, UPDATE, DELETE) EX:
+```sql
 INSERT INTO [TableName] [columns]
 VALUES (data input)
 SELECT (drop entire result set into table)
+```
 
 **DQL** Data Query Language, retrieving rows of data (SELECT). EX:
+```sql
 SELECT [columnList]
 FROM [tableList]
 WHERE [conditionList]
 GROUP BY [columnList] //For aggregate functions
 HAVING [condition]
 ORDER BY [columnList]
+```
 
 **TCL** Transaction Control Language, managing transactions (COMMIT, ROLLBACK, SAVEPOINT)
+```sql
+SAVEPOINT this_point;
+INSERT ...
+INSERT ...
+INSERT ... --Error here
+ROLLBACK TO this_point; --Undo last 3 inserts
+INSERT ...
+COMMIT; --Only last insert will commit
+```
 
-**Sequences** Generate numeric sequence, mostl for creating/managing primary keys, EX:
+**Sequences** Generate numeric sequence, mostl for creating/managing primary keys. In Oracle SQL, should be used with a PL/SQL trigger, EX:
+```sql
 CREATE OR REPLACE SEQUENCE [Name]
 MINVALUE value,
 MAXVALUE value,
 START WITH value,
 INCREMENT BY value,
 CACHE value
-
-**Triggers** Series of PL/SQL commands which execute in response to some DML action, either before or after.
+```
 
 **Views** Virtual table that displays the results of a SELECT statement, lets you reuse and store complex queries
 
 **Indexes** Physical ordering of a column or group of columns, having unique indexes
+
+**Cursors** Pointers to a result set
 
 **Alias** The `AS` or `IS` keyword allows you to set a Table name or column name as a short variable.
 
