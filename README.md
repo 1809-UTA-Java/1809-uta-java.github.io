@@ -12,7 +12,7 @@
         Shell Scripts  
         
         [Tuesday](Java%20-%20Tuesday.md)
-        
+
         Varibles  
         Primitive data types  
         Refrence types  
