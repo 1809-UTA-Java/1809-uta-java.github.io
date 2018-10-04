@@ -1,7 +1,7 @@
 # Notes
 
 ## Table of Contents     
-**Monday**  
+**Monday**  [Monday](Java - Monday.md)
 Java and its features  
 "Pillars of polymorphism"  
 Programming and compiling   
