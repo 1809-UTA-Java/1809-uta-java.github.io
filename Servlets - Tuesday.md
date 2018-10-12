@@ -35,3 +35,23 @@ The Tomcat server will handle the control flow of your application through a ser
 1. When the container shuts down or needs to conserve memory or just because a servlet's stated lifespan is reached, the container will call the `destroy()` method of your servlet.
 
 tl;dr Container calls init() once, service() many times, and eventually destroy() once.
+
+## HTTP Status Codes
+- 100-199: INFO
+- 200-299: OK/Success
+- 300-399: Redirect
+- 400-499: Error/Request Incomplete
+- 500-599: Server Error
+
+## HTTP Methods (Verbs)
+ - GET: retrieves information, sends info in the URL itself, empty body
+>localhost:8080/ExampleContext/example?name="bob"
+
+ - POST: Send info as text or binary in a body
+ - PUT
+ - DELETE
+ - PATCH
+ - UPDATE
+ - TRACE
+ - HEAD
+ - OPTIONS
