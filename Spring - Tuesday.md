@@ -89,3 +89,87 @@ But these are bad ideas because it tightly-couples your code with Spring. So ins
 - Annotations
     - @PostConstruct
     - @PreDestroy
+
+## Bean Scopes
+By default, Spring beans are singleton scoped. That means one bean (per type) per container. It's good for stateless objects. This is not the same as a Java singleton which has hardcoded scopes within a class loader. They are cached and returned whenever the named bean is requested.
+
+But there also exists a Prototype scope in which a single bean definition can be used for multiple instances of that bean. A new bean instance is created for each request, so it's useful for stateful beans, but Spring doesn't fully manage lifecycle of prototypes.
+
+```xml
+<bean name="BEAN" class="..." scope="prototype"></bean>
+```
+
+Other bean scopes include:
+- session
+- application
+- request
+- WebSocket
+- globalSession
+
+## Dependency Injection
+Spring can handle Constructor, Setter, and also Autowired injections.
+
+### Bean Wiring
+Manually injecting beans as dependencies of other beans
+-  Setter Injection which uses setter methods
+```xml
+<bean name="Employee" class="com.revature.beans.Employee">
+    <property name="animal" ref="Hippo">
+</bean>
+
+<bean name="Hippo" class="com.revature.beans.Animal">
+```
+
+To use the above, your class should have:
+```java
+public class Employee {
+    private Animal animal;
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+}
+```
+
+- Constructor Injection uses constructor arguments, which is less flexible than setter
+```xml
+<bean name="Employee" class="com.revature.beans.Employee">
+    <constructor-arg ref="Hippo">
+</bean>
+
+<bean name="Hippo" class="com.revature.beans.Animal">
+```
+
+To use the above, your class should have:
+```java
+public class Employee {
+    private Animal animal;
+    public Employee(Animal animal) {
+        this.animal = animal;
+    }
+}
+```
+
+- Autowiring lets Spring figure out dependencies 'automagically'
+
+### Wiring settings
+By default, no autowiring
+- byName which uses setter injection
+- byType also uses setters
+- constructor which uses constructors
+
+```xml
+<bean name="Employee" class="..." autowire="byType"></bean>
+<bean name="Animal" class="..."></bean>
+```
+
+To use annotations:
+```xml
+<context:component-scan base-package="..."/>
+```
+```java
+@Component
+public class Employee {
+    @Autowired
+    private Animal animal;
+}
+```
